@@ -1,0 +1,13 @@
+---
+const {
+    Class,
+    Name, 
+    Href,
+} = Astro.props;
+---
+
+<li class="nav-item">
+    <a href={Href} class={Class}>
+        <slot />
+    </a>
+</li>

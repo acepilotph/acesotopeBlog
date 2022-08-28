@@ -1,0 +1,46 @@
+---
+import Logo from './buttons/NavLogo.astro';
+import Item from './buttons/NavItem.astro';
+
+const {
+    hrefHome,
+    classHome,
+    hrefBlog,
+    classBlog,
+    hrefPort,
+    classPort,
+    hrefAbout,
+    classAbout
+} = Astro.props;
+---
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <div class="container-fluid">
+        <Logo link="/">
+            Acesotope's Blogs
+        </Logo>
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <Item Href={hrefHome} Class={classHome}>
+                    Home
+                </Item>
+                <Item Href={hrefBlog} Class={classBlog}>
+                    Blog
+                </Item>
+                <Item Href={hrefPort} Class={classPort}>
+                    Portfolio
+                </Item>
+                <Item Href={hrefAbout} Class={classAbout}>
+                    About
+                </Item>
+            </ul>
+        </div>
+
+        <ul class="navbar-nav" style="margin-top: -10%;margin-bottom: -10%;">
+            <Item Class="nav-link" Href="https://github.com/acepilotph/000Webhost-Blog-Website">
+                <i class="bi bi-github" style="font-size: 35px;" />
+            </Item>
+        </ul>
+        <ul class="navbar-nav">
+        </ul>
+    </div>
+</nav>

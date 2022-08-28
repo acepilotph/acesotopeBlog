@@ -1,0 +1,35 @@
+---
+import Header from "../components/Header.astro";
+import NavigationBar from "../components/NavBar.astro";
+
+const {
+    brand,
+    bodyTitle,
+    home,
+    blog,
+    port,
+    about
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+    <Header title={bodyTitle} />
+<body>
+    <NavigationBar
+        brand={brand}
+        classHome={home}
+        classBlog={blog}
+        classPort={port}
+        classAbout={about}
+        hrefHome="/"
+        hrefBlog=""
+        hrefPort=""
+        hrefAbout=""
+    />
+    <section class="col-11 m-auto mt-1 border">
+        <h1>
+            Hello
+        </h1>
+    </section>
+</body>
+</html>
