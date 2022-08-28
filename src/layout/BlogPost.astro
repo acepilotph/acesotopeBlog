@@ -2,12 +2,14 @@
 import Header from "../components/Header.astro";
 import NavigationBar from "../components/NavBar.astro";
 
-const { bodyTitle, home, blog, port, about } = Astro.props;
+const {
+    content: { bodyTitle, home, blog, port, about },
+} = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
     <Header title={bodyTitle} />
-<body class="bg-dark text-white">
+<body class="bg-dark text-white text-white">
     <NavigationBar classHome={home} classBlog={blog} classPort={port} classAbout={about} />
     <section class="col-11 m-auto mt-3">
         <slot />
